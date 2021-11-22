@@ -89,32 +89,6 @@ void swap(int& a, int& b)
     b = t;
 }
 
-//int partition(int arr[], int low, int high, unsigned long long& count_cmp)
-//{
-//    int pivot = arr[high];    
-//    int left = low;
-//    int right = high - 1;
-//    while (++count_cmp && true) {
-//        while (++count_cmp && ++count_cmp && left <= right && arr[left] < pivot) left++;
-//        while (++count_cmp && ++count_cmp && right >= left && arr[right] > pivot) right--;
-//        if (++count_cmp && left >= right) break;
-//        swap(arr[left], arr[right]);
-//        left++;
-//        right--;
-//    }
-//    swap(arr[left], arr[high]);
-//    return left;
-//}
-//
-//void quickSort(int arr[], int low, int high, unsigned long long& count_cmp)
-//{
-//    if (++count_cmp && low < high)
-//    {
-//        int pi = partition(arr, low, high, count_cmp);
-//        quickSort(arr, low, pi - 1, count_cmp);
-//        quickSort(arr, pi + 1, high, count_cmp);
-//    }
-//}
 
 void QuickSort(int* a, int lo, int hi, unsigned long long& count_cmp)
 {
