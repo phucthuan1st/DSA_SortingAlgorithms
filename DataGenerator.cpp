@@ -1,9 +1,4 @@
-#include <iostream>
-#include <fstream>
-#include <cmath>
-#include <time.h>
-
-using namespace std;
+#include "SortAlgorithms.h"
 
 template <class T>
 void HoanVi(T &a, T &b)
