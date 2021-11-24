@@ -99,13 +99,13 @@ void runAlgorithm(int*a,int n, unsigned long long &count_compare,const char*str,
 		break;
 	case 7:
 		start = clock();
-		//mergeSort(a, n, count_compare);
+		mergeSort(a, 0, n - 1, count_compare);
 		end = clock();
 		time_use = ((double)(end - start)) / CLOCKS_PER_SEC;
 		break;
 	case 8:
 		start = clock();
-		//QuickSort(a, n, count_compare);
+		QuickSort(a, 0, n - 1, count_compare);
 		end = clock();
 		time_use = ((double)(end - start)) / CLOCKS_PER_SEC;
 		break;
@@ -129,6 +129,7 @@ void runAlgorithm(int*a,int n, unsigned long long &count_compare,const char*str,
 		break;
 	default:
 		cout << str << " does not exist" << endl;
+		break;
 	}
 }
 
