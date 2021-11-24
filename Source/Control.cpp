@@ -384,7 +384,7 @@ void CMD5(int argc, const char* argv[])
 
 //Menu control program from input to output
 int MenuController(int argc, const char** argv) {
-    	if (argc != 5 && argc!= 6)
+    if (argc != 5 && argc!= 6)
 	{
 		cout << "Number of arguments is not exactly" << endl;
 		return 0;
