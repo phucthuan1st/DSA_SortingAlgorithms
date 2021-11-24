@@ -35,6 +35,7 @@ void QuickSort(int* a, int lo, int hi, unsigned long long& count_cmp)
 
 void shakerSort(int a[], int n, unsigned long long& count_cmp)
 {
+	count_cmp = 0;
 	int Left = 0;
 	int Right = n - 1;
 	int k = 0;
@@ -63,6 +64,7 @@ void shakerSort(int a[], int n, unsigned long long& count_cmp)
 
 void counting_sort(int input[], int n, unsigned long long& count_cmp)
 {
+	count_cmp = 0;
     int* output = new int[n]; 
     int max = input[0];
     int min = input[0];
@@ -196,6 +198,8 @@ void heapify(int* arr, int n, int i, unsigned long long& count_cmp)
 
 void heapSort(int* arr, int n, unsigned long long& count_cmp)
 {
+	count_cmp = 0;
+
 	// Build heap (rearrange array) 
 	for (int i = n / 2 - 1; ++count_cmp && i >= 0; i--)
 	{
@@ -225,6 +229,7 @@ void heapSort(int* arr, int n, unsigned long long& count_cmp)
 // Hàm selection sort
 void selectionSort(int* arr, int n, unsigned long long& count_cmp)
 {
+	count_cmp = 0;
 	int i, j, min_idx;
 
 	// Di chuyển ranh giới của mảng đã sắp xếp và chưa sắp xếp
@@ -333,7 +338,9 @@ void mergeSort(int arr[], int left, int right, unsigned long long& count_cmp)
 }
 
 void shellSort(int a[], int n, unsigned long long& count_compare) {
+	count_compare = 0;
 	int interval, i, j, temp;
+
 	for (interval = n / 2; ++count_compare && interval > 0; interval /= 2) {
 		for (i = interval; ++count_compare && i < n; i++) {
 			temp = a[i];
@@ -348,6 +355,7 @@ void shellSort(int a[], int n, unsigned long long& count_compare) {
 //Add count comparisions
 void flashSort(int arr[], int n, unsigned long long& count_compare)
 {
+	count_compare = 0;
 	int max = 0, min = arr[0];
 	int m = 0.45 * n;
 	int* l = new int[m];
@@ -413,6 +421,7 @@ void flashSort(int arr[], int n, unsigned long long& count_compare)
 }
 
 void radix_sort(int* a, int n, unsigned long long& count_compare) {
+	count_compare = 0; 
 	vector<Queue> bucket(10, Queue());
 
 	int max = a[0];
