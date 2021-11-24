@@ -55,6 +55,7 @@ void GenerateNearlySortedData(int a[], int n)
 	}
 }
 
+// Hàm phát sinh mảng dữ liệu
 void GenerateData(int a[], int n, int dataType)
 {
 	switch (dataType)

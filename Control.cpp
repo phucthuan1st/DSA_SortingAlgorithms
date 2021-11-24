@@ -2,7 +2,7 @@
 
 #include "SortAlgorithms.h"
 
-//
+//Get algorithms from input parameters
 int getAlgorithm(const char* str)
 {
 	if (strcmp(str, "selection-sort") == 0)
@@ -52,7 +52,9 @@ int getAlgorithm(const char* str)
 	else
 		return 0;
 }
-//
+
+
+//Run algorithms by parameters
 void runAlgorithm(int*a,int n, unsigned long long &count_compare,const char*str, double &time_use)
 {
 	int k = getAlgorithm(str);
@@ -129,7 +131,9 @@ void runAlgorithm(int*a,int n, unsigned long long &count_compare,const char*str,
 		cout << str << " does not exist" << endl;
 	}
 }
-//
+
+
+//read array from input file
 int* readInputFrom(string file, int& n)
 {
 	fstream f;
@@ -147,7 +151,9 @@ int* readInputFrom(string file, int& n)
 	f.close();
 	return a;
 }
-//
+
+
+//write the output to a file
 void writeOutputTo(string file, int n, int* a)
 {
 	fstream f;
@@ -164,7 +170,9 @@ void writeOutputTo(string file, int n, int* a)
 	f << endl;
 	f.close();
 }
-//
+
+
+//get the ouput parameter from input parameter
 void ouputParameter(const char* str, double time_use, unsigned long long count_compare)
 {
 	if (strcmp(str, "-both") == 0)
@@ -184,7 +192,9 @@ void ouputParameter(const char* str, double time_use, unsigned long long count_c
 		cout << str << " does not exist" << endl;
 	}
 }
-//
+
+
+//check if a string is a number
 bool isNum(const char*str)
 {
 	for (int i = 0; i < strlen(str); i++)
@@ -196,7 +206,9 @@ bool isNum(const char*str)
 	}
 	return true;
 }
-//
+
+
+//option 1
 void CMD1(int argc, const char* argv[])
 {
 	unsigned long long count_compare=0;
@@ -212,7 +224,9 @@ void CMD1(int argc, const char* argv[])
 	cout << "--------------------------" << endl;
 	ouputParameter(argv[4], time_use, count_compare);
 }
-//
+
+
+//option 2
 void CMD2(int argc, const char* argv[])
 {
 	unsigned long long count_compare = 0;
@@ -252,7 +266,9 @@ void CMD2(int argc, const char* argv[])
 	cout << "-------------------------" << endl;
 	ouputParameter(argv[5], time_use, count_compare);
 }
-//
+
+
+//option 3
 void CMD3(int argc, const char* argv[])
 {
 	unsigned long long count_compare = 0;
@@ -294,7 +310,9 @@ void CMD3(int argc, const char* argv[])
 		ouputParameter(argv[4], time_use, count_compare);
 	}
 }
-//
+
+
+//option 4
 void CMD4(int argc, const char* argv[])
 {
 	unsigned long long count_compare1 = 0;
@@ -316,7 +334,9 @@ void CMD4(int argc, const char* argv[])
 	cout << "Comparisions:" << count_compare1<<"  |  "<<count_compare2 << endl;
 
 }
-//
+
+
+//option 5
 void CMD5(int argc, const char* argv[])
 {
 	unsigned long long count_compare1 = 0;
@@ -361,6 +381,7 @@ void CMD5(int argc, const char* argv[])
 }
 //
 
+//Menu control program from input to output
 int MenuController(int argc, const char** argv) {
     	if (argc != 5 && argc!= 6)
 	{
