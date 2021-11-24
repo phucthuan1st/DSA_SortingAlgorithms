@@ -418,4 +418,5 @@ int MenuController(int argc, const char** argv) {
 			CMD5(argc, argv);
 		}
 	}
+	return 0;
 }
