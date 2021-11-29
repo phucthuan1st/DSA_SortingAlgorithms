@@ -352,11 +352,11 @@ void shellSort(int a[], int n, unsigned long long& count_compare) {
 	}
 }
 
-//Add count comparisions
+//
 void flashSort(int arr[], int n, unsigned long long& count_compare)
 {
 	count_compare = 0;
-	int max = 0, min = arr[0];
+	int max_Index = 0, min = arr[0];
 	int m = 0.45 * n;
 	int* l = new int[m];
 
@@ -364,12 +364,12 @@ void flashSort(int arr[], int n, unsigned long long& count_compare)
 		if (++count_compare && arr[i] < min) {
 			min = arr[i];
 		}
-		if (++count_compare && arr[i] > arr[max]) {
-			max = i;
+		if (++count_compare && arr[i] > arr[max_Index]) {
+			max_Index = i;
 		}
 	}
 
-	int c1 = (m - 1) / (arr[max] - min);
+	int c1 = (m - 1) / (arr[max_Index] - min);
 
 
 	for (int k = 0; ++count_compare && k < m; k++) {
@@ -384,8 +384,8 @@ void flashSort(int arr[], int n, unsigned long long& count_compare)
 		l[p] = l[p] + l[p - 1];
 	}
 
-	int hold = arr[max];
-	arr[max] = arr[0];
+	int hold = arr[max_Index];
+	arr[max_Index] = arr[0];
 	arr[0] = hold;
 
 	//permutation
